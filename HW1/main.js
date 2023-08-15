@@ -17,7 +17,7 @@ let n7= 16;
 let b1 = true;
 let b2 = false;
 
-console.log(`${s1} ${s2} ${s3} ${s4} ${n1} ${n2} ${n3} ${n4} ${n5} ${n6} ${7} ${b1} ${b2}`);
+console.log(s1,s2,s3,s4,n1,n2,n3,n4,n5,n6,n7,b1,b2);
 }
 
 //=======TASK2=======//
