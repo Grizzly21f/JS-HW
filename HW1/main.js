@@ -41,5 +41,6 @@ console.log(typeof b);
 let name = prompt('Type your Firstname');
 let middle = prompt('Type your Middlename');
 let last = prompt('Type your LastName');
-let pib =(name + ' ' + middle + ' ' + last);
+let age = +prompt('Enter your age');
+let pib =(name + ' ' + middle + ' ' + last + ' '+ age);
 console.log(pib);
