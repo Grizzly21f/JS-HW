@@ -17,9 +17,9 @@ let bk2= {title: 'sf md' , pagecount: 200,genre: 'classic'};
 let bk3= {title: 'Ghoul' , pagecount: 20,genre: 'manga-romantic'};
 
 //Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.
-let bk4= {title: 'Hr poter' , pagecount: 120,genre: 'fantasy',author:['name','age']};
-let bk5= {title: 'sf md' , pagecount: 200,genre: 'classic',author:['name','age']};
-let bk6= {title: 'Ghoul' , pagecount: 20,genre: 'manga-romantic',author:['name','age']};
+let bk4= {title: 'Hr poter' , pagecount: 120,genre: 'fantasy',author: [{name:'name',age:'age'}]};
+let bk5= {title: 'sf md' , pagecount: 200,genre: 'classic',author:[{name:'name',age:'age'}]};
+let bk6= {title: 'Ghoul' , pagecount: 20,genre: 'manga-romantic',author:[{name:'name',age:'age'}]};
 
 //Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
 let users=[
@@ -34,7 +34,16 @@ let users=[
     { name:'Kony', username: 'GSDFA', password: 45654},
     { name:'Vasily', username: 'ADSFA', password: 867568},
 ]
-console.log(users)
+console.log(users[0].password);
+console.log(users[1].password);
+console.log(users[2].password);
+console.log(users[3].password);
+console.log(users[4].password);
+console.log(users[5].password);
+console.log(users[6].password);
+console.log(users[7].password);
+console.log(users[8].password);
+console.log(users[9].password);
 
 
 //- Є змінна х, якій ви надаєте довільне числове значення.
@@ -101,6 +110,9 @@ switch (dofw)  {
     case 7:
         console.log('Sunday');
         break;
+
+    default:
+        console.log('?????');
 }
 
 //- Користувач вводить або має два числа.Потрібно знайти та вивести максимальне число з тих двох .Також потрібно врахувати коли введені рівні числа.
@@ -118,9 +130,12 @@ if (num1 > num2){
 }
 
 // - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який, за допомогою  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)
-
-let x = prompt('x') || "default";
+let x = '';
+if (x === '' || x === null || x === undefined || x === 0){
+    x = 'default';
+}
 console.log(x);
+
 
 //- з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
 
