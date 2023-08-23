@@ -387,13 +387,13 @@ console.log('=================')
 //     let books = [
 //         {
 //             title: 'HarryPotter and cup of whisky',
-//             pageCount: 80,
+//             pageCount: 200,
 //             genre: ['fantasy', 'artistic', 'comedy'],
 //             authors: [{name: 'Author name1', age: 29}, {name: 'Author name2', age: 30}]
 //         },
 //         {
 //             title: 'Astral',
-//             pageCount: 250,
+//             pageCount: 300,
 //             genre: ['horror', 'fantasy'],
 //             authors: [{name: 'Author name1', age: 32}]
 //         },
