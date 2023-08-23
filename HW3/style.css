@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.usr-box {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.user-block {
+    background-color: #a28ccc;
+    width: 50vw;
+    padding-left: 3vh;
+    box-sizing: border-box;
+    border: 0.5vh solid #6479af;
+}
