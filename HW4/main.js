@@ -152,11 +152,11 @@
 //     for (const currencyValue of currencyValues) {
 //         if (currencyValue.currency === exchangeCurrency) {
 //             Value = currencyValue.value;
-//             break;
+//             return sumUAH / Value;
 //         }
 //     }
 //
-//     return sumUAH / Value;
+//
 // }
 //
 // let convertedSum = Exchange(10000, [{currency: 'USD', value: 40}, {currency: 'EUR', value: 42}, {currency: 'PL', value: 8}], 'PL')
