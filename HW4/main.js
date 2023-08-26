@@ -161,3 +161,4 @@
 //
 // let convertedSum = Exchange(10000, [{currency: 'USD', value: 40}, {currency: 'EUR', value: 42}, {currency: 'PL', value: 8}], 'PL')
 //
+//
