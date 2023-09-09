@@ -243,4 +243,3 @@ if (foundCinderella) {
 } else {
     console.log("Принц не знайшов відповідну Попелюшку");
 }
-//
