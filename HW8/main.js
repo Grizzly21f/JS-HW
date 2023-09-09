@@ -242,4 +242,4 @@ if (foundCinderella) {
     console.log(`Принц має зустрітися з Попелюшкою ${foundCinderella.name}`);
 } else {
     console.log("Принц не знайшов відповідну Попелюшку");
-}
+}//
