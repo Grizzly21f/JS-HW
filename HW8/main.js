@@ -1,16 +1,18 @@
 //Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
 // створити пустий масив, наповнити його 10 об'єктами new User(....)
-function User(name,id,age,game){
+function User(name,id,age,surname,email,phone){
     this.name = name;
     this.id = id;
     this.age = age;
-    this.game = game;
+    this.surname = surname;
+    this.email = email;
+    this.phone = phone;
 }
 
 let users=[];
 
 for (let i = 1; i <= 10; i++) {
-    let newUser = new User("Name" +i, 6 + i, 12 + i, "Elden Ring" + i);
+    let newUser = new User("Name" +i, 6 + i, 12 + i, "Surname" + i,"client@example.com" + i,"123-456-789" + i);
     users.push(newUser);
 }
 console.log(users);
@@ -45,7 +47,7 @@ class Client {
 let clients = [];
 
 for (let i = 1; i <= 10; i++) {
-const newClient = new Client(i,`Name ${i}`,`Surname ${i}`,`client${i}@example.com`,`123-456-789${i}`,[]);
+const newClient = new Client(i,`Name ${i}`,`Surname ${i}`,`client${i}@example.com`,`123-456-789${i}`,[order.length++]);
 
     clients.push(newClient);
 }
@@ -79,9 +81,9 @@ function Car(model, manufacturer, year, maxSpeed, engineVolume) {
 
     this.info = function() {
         console.log("інформація про автомобіль: ");
-        for (const prop in this) {
-            if (this.hasOwnProperty(prop)) {
-                //console.log(`${prop} - ${this[prop]}}`);
+        for (const key in this) {
+            if (typeof this[key] == "function") {
+                console.log(`${key} - ${this[key]}`)
             }
         }
     };
@@ -201,7 +203,7 @@ const cinderellas = [
 
 // let cinderellas = [];
 // for (let i = 1; i <= 10; i++) {
-//     let newCinderella = new Cinderella(i,+ i,+ i,);
+//     let newCinderella = new Cinderella(+i,+ i,+ i,);
 //     users.push(newCinderella);
 // }
 // console.log(cinderellas);
