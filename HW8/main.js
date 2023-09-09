@@ -44,13 +44,20 @@ class Client {
     }
 }
 
-let clients = [];
+    const clients = [
+        new Client(1, 'Іван', 'Петров', 'ivan@example.com', '+380123456789', ['Товар 1', 'Товар 2']),
+        new Client(2, 'Марія', 'Сидорова', 'maria@example.com', '+380987654321', ['Товар 3', 'Товар 4']),
+        new Client(3, 'Петро', 'Іванов', 'petro@example.com', '+380555555555', ['Товар 5']),
+        new Client(4, 'Анна', 'Коваленко', 'anna@example.com', '+380111111111', ['Товар 6', 'Товар 7']),
+        new Client(5, 'Олексій', 'Смирнов', 'oleksiy@example.com', '+380222222222', ['Товар 8']),
+        new Client(6, 'Тетяна', 'Морозова', 'tetiana@example.com', '+380333333333', ['Товар 9', 'Товар 10']),
+        new Client(7, 'Михайло', 'Павленко', 'mikhailo@example.com', '+380444444444', ['Товар 11', 'Товар 12']),
+        new Client(8, 'Наталія', 'Лисенко', 'natalia@example.com', '+380555555555', ['Товар 13']),
+        new Client(9, 'Денис', 'Григоренко', 'denis@example.com', '+380666666666', ['Товар 14', 'Товар 15']),
+        new Client(10, 'Олена', 'Ткаченко', 'olena@example.com', '+380777777777', ['Товар 16', 'Товар 17'])
+    ];
 
-for (let i = 1; i <= 10; i++) {
-const newClient = new Client(i,`Name ${i}`,`Surname ${i}`,`client${i}@example.com`,`123-456-789${i}`,[order.length++]);
 
-    clients.push(newClient);
-}
 console.log(clients);
 
 //Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
