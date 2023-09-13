@@ -54,7 +54,7 @@ class Client {
         new Client(7, 'Михайло', 'Павленко', 'mikhailo@example.com', '+380444444444', ['Товар 11', 'Товар 12']),
         new Client(8, 'Наталія', 'Лисенко', 'natalia@example.com', '+380555555555', ['Товар 13']),
         new Client(9, 'Денис', 'Григоренко', 'denis@example.com', '+380666666666', ['Товар 14', 'Товар 15']),
-        new Client(10, 'Олена', 'Ткаченко', 'olena@example.com', '+380777777777', ['Товар 16', 'Товар 17'])
+        new Client(10, 'Олена', 'Ткаченко', 'olena@example.com', '+380777777777', ['Товар 16', 'Товар 17','Товар 18'])
     ];
 
 
@@ -138,14 +138,14 @@ console.log(car);
 //   }
 //
 
-//   info() {
-//     console.log("Інформація про автомобіль:");
-//     for (const prop in this) {
-//       if (this.hasOwnProperty(prop)) {
-//         console.log(`${prop} - ${this[prop]}`);
-//       }
+// this.info = function() {
+//     console.log("інформація про автомобіль: ");
+//     for (const key in this) {
+//         if (typeof this[key] == "function") {
+//             console.log(`${key} - ${this[key]}`)
+//         }
 //     }
-//   }
+// };
 //
 
 //   increaseMaxSpeed(newSpeed) {
