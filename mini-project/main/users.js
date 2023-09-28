@@ -6,16 +6,13 @@ fetch('http://jsonplaceholder.typicode.com/users')
     .then(users => {
         for (let user of users) {
             const button = document.createElement('button');
+
             button.addEventListener('click', (e) => {
                 location.href = `user-details.html?id=${user.id}`;
             })
             button.innerText = 'Details';
             button.style.fontFamily = 'Oxanium';
             button.classList.add('user-button');
-
-
-
-
             const div = document.createElement('div');
 
             div.innerText = `${user.id} - ${user.name}`;

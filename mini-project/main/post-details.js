@@ -23,6 +23,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
         comments.forEach(comment => {
             const commentBlock = document.createElement('div');
             commentBlock.classList.add('comment-block');
+            commentBlock.classList.add('cyber-tile-bi');
             commentBlock.innerHTML = `
                     <h2>Comment Details</h2>
                     <p>Name: ${comment.name}</p>

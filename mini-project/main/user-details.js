@@ -2,37 +2,33 @@ const params = new URLSearchParams(document.location.search);
 const id = params.get('id');
 
 const userWrapper = document.getElementsByClassName('Wper')[0];
-const ul = document.createElement('div');
+const ul = document.getElementsByClassName('u-details')[0];
+const postList = document.getElementsByClassName('post-list')[0];
 let postsDisplayed = false;
 
-function fetchUserPosts() {
+let nodePostList = [];
+
     if (!postsDisplayed) {
         fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
             .then(response => response.json())
             .then(posts => {
-                const postList = document.createElement('div');
-                postList.classList.add('post-list');
-
+                const postList = document.getElementsByClassName('post-list')[0];
                 posts.forEach(post => {
                     const postItem = document.createElement('div');
                     postItem.innerHTML = `
                         <span>${post.title}</span>
                         <button class="post-details-button" data-post-id="${post.id}">View Details</button>`;
+
+                    nodePostList.push(postItem);
+
                     postList.appendChild(postItem);
                     postItem.classList.add('post-item');
                 });
-                postList.classList.add('post-list');
-
-                userWrapper.appendChild(postList);
-                // postsDisplayed = true;
             });
        postsDisplayed = !postsDisplayed
     } else {
-        const postList = document.getElementsByClassName('post-list')[0];
         postList.innerHTML='';
     }
-
-}
 
 fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     .then(response => response.json())
@@ -53,17 +49,25 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
             }
         }
 
-        ul.classList.add('u-details');
         userExplorer(data);
-        userWrapper.appendChild(ul);
 
-        const showPostsButton = document.createElement('button');
-        showPostsButton.classList.add('showl')
-        showPostsButton.innerText = 'Show Posts';
+        const showPostsButton = document.getElementsByClassName('showl')[0];
         showPostsButton.style.fontFamily = 'Oxanium';
-        showPostsButton.addEventListener('click', fetchUserPosts);
-        userWrapper.appendChild(showPostsButton);
 
+        let listSwitcher = true;
+        showPostsButton.addEventListener('click', () => {
+            if (listSwitcher) {
+                const emptyDiv = document.createElement('div');
+                postList.innerHTML = '';
+                postList.classList.remove('post-list')
+                postList.appendChild(emptyDiv);
+                listSwitcher = !listSwitcher;
+            } else {
+                postList.classList.add('post-list')
+                nodePostList.map(item => postList.appendChild(item))
+                listSwitcher = !listSwitcher;
+            }
+        });
         userWrapper.addEventListener('click', (event) => {
             if (event.target.classList.contains('post-details-button')) {
                 const postId = event.target.getAttribute('data-post-id');

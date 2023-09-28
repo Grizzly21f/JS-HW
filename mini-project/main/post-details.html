@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Details</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="cyberpunk-css-main/cyberpunk.css">
 </head>
 <style>
     .dv,.main{
         padding-left: 20px;
     }
     body{
-        width: 100vw;
+    height: 80vh;
+    }
+    main{
+
         overflow-x: hidden;
-        background-image: url('img/Neon-Aesthetic.jpg'); /* Вкажіть шлях до вашого зображення */
+        background-image: url('img/Neon-Aesthetic.jpg');
         background-size: cover;
-        background-repeat: no-repeat; /* Відключення повторення зображення */
+        background-repeat: no-repeat;
+        animation: cyber-glitch-1 5s linear infinite;
+
     }
    @font-face
    {
@@ -26,15 +31,18 @@
        src: url(cyberpunk-css-main/fonts/Oxanium.woff2) format('woff2');
    }
 </style>
-<body>
-    <div class="h1"><h1 id="h1">Post</h1></div>
+<body><main>
+<!--<img src="img/Neon-Aesthetic.jpg" alt="" class="cyber-glitch-1 ">-->
+    <div class="h1">
+        <div class="h2"><h1 id="h2" class="cyber-glitch-4 cyberpunk-font-og">Cyberpunk</h1></div>
+        <h1 id="h1a">Post</h1></div>
             <div class="main">
                 <div  class="post-details"></div>
             </div>
     <div class="dv">
         <div class="comments"></div>
     </div>
+</main>
         <script src="post-details.js"></script>
 </body>
 </html>
->

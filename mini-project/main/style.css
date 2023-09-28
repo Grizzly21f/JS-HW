@@ -111,7 +111,7 @@ body{
     align-items: center;
     flex-direction: column;
     border: 5px solid #2bffed;
-    font-size: 26px;
+    font-size: 2vh;
     width: 25vw;
     height: 50vh;
     border-radius: 20px;
@@ -134,7 +134,23 @@ body{
     margin-right:48.5vw;
 
 }
+#h1i{
+
+    color: #0beafa;
+    text-shadow: 10px 10px 25px 26px #08FFEAFF;
+    display: flex;
+    margin-right:47.5vw;
+
+}#h1a{
+
+    color: #0beafa;
+    text-shadow: 10px 10px 25px 26px #08FFEAFF;
+    display: flex;
+    margin-right:49.5vw;
+
+}
 #h2{
+    margin-bottom: 40px;
     margin-left: 91px;
     color: #fffb00;
     text-shadow: 10px 10px 25px 26px #08FFEAFF;
@@ -242,7 +258,7 @@ body{
     box-shadow: 0px 5px 5px #000000;
     transition: 0.3s;
     text-align: center;
-    font-size: 26px;
+    font-size: 2vh;
 }
 .post-details-button:hover{
     height: 46px;
@@ -277,6 +293,46 @@ body{
 
 
 }
+.cyber-glitch-4
+{
+    animation: cyber-glitch-4 5s linear infinite;
+}
+
+
+@keyframes cyber-glitch-4
+{
+    0% {visibility: visible;}
+    1% {visibility: hidden;}
+    2% {visibility: hidden;}
+    3% {visibility: visible;}
+
+    20% {visibility: visible;}
+    21% {visibility: hidden;}
+    24% {visibility: hidden;}
+    25% {visibility: visible;}
+
+    40% {visibility: visible;}
+    41% {visibility: hidden;}
+    42% {visibility: hidden;}
+    43% {visibility: visible;}
+
+    44% {visibility: visible;}
+    45% {visibility: hidden;}
+    46% {visibility: hidden;}
+    47% {visibility: visible;}
+
+    60% {visibility: visible;}
+    61% {visibility: hidden;}
+    64% {visibility: hidden;}
+    65% {visibility: visible;}
+
+    70% {visibility: visible;}
+    71% {visibility: hidden;}
+    72% {visibility: hidden;}
+    73% {visibility: visible;}
+
+    100% {visibility: visible;}
+}
 .comment-block{
     width: 23vw;
     border: 3px solid #2bffed;
@@ -284,6 +340,19 @@ body{
     color: #ff1d54;
     background-color: #2bffed;
     opacity: 75%;
+}
+.cyber-tile-bi
+{
+    --tile-width: 23vw;
+    --tile-padding: 4px;
+    --tile-edges: 20px;
+    --label-margins: calc(var(--tile-edges) - var(--tile-padding));
+    --og-clip-path: polygon(0 0, 0 calc(100% - var(--tile-edges)), var(--tile-edges) 100%, 100% 100%, 100% var(--tile-edges), calc(100% - var(--tile-edges)) 0);
+
+    min-height: 60px;
+    clip-path: var(--og-clip-path);
+    padding: var(--tile-padding);
+    padding-bottom: var(--tile-edges);
 }
 .post-details{
     padding-top: 5px;

@@ -94,6 +94,7 @@ body
 .cyberpunk-font-og,
 .cyberpunk-font-og *
 {
+    align-items: center;
     font-family: Cyberpunk !important;
     text-transform: uppercase !important;
     letter-spacing: -.25em;
