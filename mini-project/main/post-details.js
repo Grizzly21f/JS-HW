@@ -31,5 +31,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
                     <p>Email: ${comment.email}</p>
                     <p>Body: ${comment.body}</p>`;
             commentsContainer.appendChild(commentBlock);
+
         });
+
     });

@@ -17,12 +17,13 @@ let nodePostList = [];
                     const postItem = document.createElement('div');
                     postItem.innerHTML = `
                         <span>${post.title}</span>
-                        <button class="post-details-button" data-post-id="${post.id}">View Details</button>`;
+                        <button class="post-details-button cyber-tile-bi2" data-post-id="${post.id}">View Details</button>`;
 
                     nodePostList.push(postItem);
 
                     postList.appendChild(postItem);
                     postItem.classList.add('post-item');
+                    postItem.classList.add('cyber-tile-bi2');
                 });
             });
        postsDisplayed = !postsDisplayed
@@ -72,6 +73,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
             if (event.target.classList.contains('post-details-button')) {
                 const postId = event.target.getAttribute('data-post-id');
                 window.location.href = `post-details.html?id=${postId}`;
+
             }
         });
     });

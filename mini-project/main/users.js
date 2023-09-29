@@ -13,6 +13,7 @@ fetch('http://jsonplaceholder.typicode.com/users')
             button.innerText = 'Details';
             button.style.fontFamily = 'Oxanium';
             button.classList.add('user-button');
+            button.classList.add('cyber-glitch-2');
             const div = document.createElement('div');
 
             div.innerText = `${user.id} - ${user.name}`;
@@ -21,6 +22,7 @@ fetch('http://jsonplaceholder.typicode.com/users')
             div.appendChild(button);
             ul.classList.add('u-ul')
             div.classList.add('u-div')
+            div.classList.add('cyber-tile-bi1')
         }
         userWrapper.appendChild(ul);
     })
