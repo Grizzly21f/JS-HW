@@ -4,6 +4,13 @@ const postId = params.get('id');
 const postDetailsContainer = document.querySelector('.post-details');
 const commentsContainer = document.querySelector('.comments');
 
+const backButton = document.getElementsByClassName('back')[0];
+let detailsPageId = JSON.parse(localStorage.getItem('detailId')) || null;
+backButton.addEventListener('click', () => {
+    location.href = `user-details.html?id=${detailsPageId}`;
+    localStorage.removeItem('detailId');
+})
+
 fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
     .then(response => response.json())
     .then(post => {

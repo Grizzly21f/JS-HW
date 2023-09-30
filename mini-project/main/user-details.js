@@ -70,10 +70,13 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
             }
         });
         userWrapper.addEventListener('click', (event) => {
+            let detailsPageId = JSON.parse(localStorage.getItem('detailId')) || null;
+            detailsPageId = id;
+            localStorage.setItem('detailId', JSON.stringify(detailsPageId));
+
             if (event.target.classList.contains('post-details-button')) {
                 const postId = event.target.getAttribute('data-post-id');
                 window.location.href = `post-details.html?id=${postId}`;
-
             }
         });
     });
