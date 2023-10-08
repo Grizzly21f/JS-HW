@@ -26,3 +26,4 @@ fetch('http://jsonplaceholder.typicode.com/users')
         }
         userWrapper.appendChild(ul);
     })
+//

@@ -5,7 +5,7 @@ for(let i = 0; i < 10; i++) {
 document.write('<br>')
 //За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
 for(let i = 0; i < 10; i++) {
-    document.write(`<div>${i} Kaneki</div>`);
+    document.write(`<div> Kaneki</div>`);
 }
 // За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
 let i = 0;
